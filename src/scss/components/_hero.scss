@@ -1,5 +1,75 @@
 .hero {
-  &__img {
-    width: 1000px;
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 145px;
+    display: flex;
+    gap: 30px;
+  }
+
+  &__left {
+    flex: 1 1 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: 'EurostileRoundExtended';
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 81px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+    max-width: 527px;
+  }
+
+  &__right {
+    flex: 1 1 633px;
+    max-width: 633px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__first-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform: scale(0.6515625);
+  }
+
+  &__second-card {
+    position: absolute;
+    top: 125px;
+    left: 252px;
+    z-index: 9;
+    transform: scale(0.5953125);
+  }
+
+  &__third-card {
+    position: absolute;
+    top: 289px;
+    left: 46px;
+    z-index: 8;
+    transform: scale(0.6515625);
+  }
+
+  &__fourth-card {
+    position: absolute;
+    top: 406px;
+    left: 252px;
+    z-index: 7;
+    transform: scale(0.53125);
+  }
+
+  &__round-button {
+    align-self: flex-end;
   }
 }

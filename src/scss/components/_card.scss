@@ -1,0 +1,75 @@
+.card {
+  transform-origin: top left;
+  color: $white;
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 640px;
+    height: 366px;
+    border-radius: 20px;
+    background-color: $olive-green;
+    font-family: "EurostileRoundExtended";
+    text-transform: uppercase;
+    border: none;
+  }
+
+  &__type {
+    margin-right: 40px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 6;
+    text-align: right;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: 0.05em;
+  }
+
+  &__name {
+    margin-left: 40px;
+    margin-top: 235px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+  }
+
+  &__half {
+    position: absolute;
+    z-index: 5;
+    bottom: 48px;
+    left: 333px;
+    left: 50%;
+    width: 432px;
+    height: 432px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+    transform: rotate(30deg);
+
+    @include dark-gradient-background;
+  }
+}
+
+.card_blue {
+  .card__half {
+    @include blue-gradient-background;
+  }
+}
+
+.card_gold {
+  .card__type {
+    color: $black;
+  }
+
+  .card__half {
+    @include gold-gradient-background;
+  }
+}
+
+.card_white {
+  .card__half {
+    @include white-gradient-background;
+  }
+}

@@ -1,0 +1,16 @@
+@mixin dark-gradient-background {
+  background: linear-gradient(180deg, #303030 29.43%, #161616 93.22%);
+}
+
+@mixin blue-gradient-background {
+  background: linear-gradient(180deg, #0134BA 48.77%, #002381 87.89%);
+}
+
+@mixin gold-gradient-background {
+  background: linear-gradient(180deg, #FFBF00 48.03%, #FFC928 85.14%);
+}
+
+@mixin white-gradient-background {
+  background: linear-gradient(180deg, #FFFFFF 49.36%, #DEDEDE 92.36%);
+}
+
