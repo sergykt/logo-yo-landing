@@ -1,15 +1,16 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Pagination, Keyboard, A11y } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-const newSwiper = new Swiper('.auto__swiper', {
-  modules: [Navigation],
+const autoSwiper = new Swiper('.auto__swiper', {
+  modules: [Pagination, Keyboard, A11y],
   direction: 'horizontal',
   slidesPerView: 1,
-  navigation: {
-    nextEl: '.auto__swiper-next-btn',
-    prevEl: '.auto__swiper-prev-btn',
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
   },
   breakpoints: {
     768: {
@@ -22,4 +23,10 @@ const newSwiper = new Swiper('.auto__swiper', {
       slidesPerView: 4,
     },
   },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  grabCursor: true,
+  a11y: true,
 });

@@ -1,0 +1,109 @@
+.offer {
+  &__title {
+    margin: 0 auto 26px auto;
+    font-family: 'EurostileRoundExtended';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 1020px;
+  }
+
+  &__text {
+    font-family: 'HalvarBreitschrift';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: capitalize;
+    max-width: 810px;
+    margin: 0 auto 40px auto;
+  }
+
+  &__swiper-wrapper {
+    overflow: hidden;
+    margin-bottom: 120px;
+  }
+
+  &__swiper {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__slide {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease-in;
+    padding: 20px 0;
+    background-color: inherit;
+    transition: all 0.2 ease-in;
+  }
+
+  &__card {
+    width: 640px;
+    max-width: 100%;
+  }
+
+  &__card:nth-child(2) {
+    display: none;
+  }
+
+  &__slide:hover {
+    animation: zoomInOut 1s 1 alternate;
+
+    @keyframes zoomInOut {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.04);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .offer__card:nth-child(1) {
+      display: none;
+    }
+
+    .offer__card:nth-child(2) {
+      display: block;
+    }
+  }
+
+  &__swiper-prev-btn {
+    position: absolute;
+    z-index: 15;
+    height: 35px;
+    width: 20px;
+    top: 50%;
+    left: -40px;
+    transform: translate(0, -50%);
+
+    @media (max-width: 1024px) {
+      left: -10px;
+    }
+  }
+
+  &__swiper-next-btn {
+    position: absolute;
+    z-index: 15;
+    height: 35px;
+    width: 20px;
+    top: 50%;
+    right: -40px;
+    transform: translate(0, -50%);
+
+    @media (max-width: 1024px) {
+      right: -10px;
+    }
+  }
+}

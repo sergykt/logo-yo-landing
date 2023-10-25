@@ -6,7 +6,7 @@
   background-color: $dark-charcoal;
 
   &__container {
-    overflow: hidden;
+    //overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,6 +20,11 @@
     width: 168px;
     height: 20px;
     vertical-align: middle;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   &__main {
@@ -65,11 +70,18 @@
     display: flex;
     gap: 20px;
   }
-  &__social-link {}
+
+  &__social-link {
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
   &__social-logo {
     width: 40px;
     height: 40px;
     vertical-align: middle;
   }
 }
-

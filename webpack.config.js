@@ -69,7 +69,7 @@ module.exports = (env, argv) => {
           }
         },
         {
-          test: /\.(png|jpg|jpeg|gif|webp)$/i,
+          test: /\.(png|jpg|jpeg|gif)$/i,
           type: 'asset/resource',
           use: !isProd
             ? []
@@ -81,17 +81,13 @@ module.exports = (env, argv) => {
                     progressive: true,
                   },
                   optipng: {
-                    enabled: false,
+                    enabled: true,
                   },
                   pngquant: {
-                    quality: [0.65, 0.9],
-                    speed: 4,
+                    quality: [0.8, 0.995],
                   },
                   gifsicle: {
                     interlaced: false,
-                  },
-                  webp: {
-                    quality: 75,
                   },
                 },
               },
@@ -122,6 +118,11 @@ module.exports = (env, argv) => {
                   tag: "img",
                   attribute: "src",
                   type: "src",
+                },
+                {
+                  tag: "img",
+                  attribute: "srcset",
+                  type: "srcset",
                 },
               ],
             },
@@ -163,7 +164,7 @@ module.exports = (env, argv) => {
       hot: true,
       compress: true,
       static: {
-        directory: path.join(__dirname, 'src'),
+        directory: path.join(__dirname, 'build'),
       }
     },
     plugins: [

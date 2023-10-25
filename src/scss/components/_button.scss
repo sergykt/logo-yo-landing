@@ -9,4 +9,9 @@
   text-transform: uppercase;
   padding: 18px 30px;
   white-space: nowrap;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    opacity: 0.85;
+  }
 }

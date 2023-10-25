@@ -6,4 +6,9 @@
   border: 2px solid $white;
   border-radius: 50%;
   white-space: nowrap;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    opacity: 0.85;
+  }
 }
