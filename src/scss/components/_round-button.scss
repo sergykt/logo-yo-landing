@@ -2,13 +2,40 @@
   width: 200px;
   height: 200px;
   color: $white;
+  font-size: 18px;
+  line-height: 1.5;
   font-family: 'HalvarBreitschrift';
   border: 2px solid $white;
   border-radius: 50%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   white-space: nowrap;
   transition: all 0.2s ease-in;
 
+  @media (max-width: 767.9px) {
+    width: 150px;
+    height: 150px;
+    font-size: 14px;
+  }
+
   &:hover {
-    opacity: 0.85;
+    animation: zoomInOut 1s 1 alternate;
+    border-color: silver;
+    color: silver;
+
+    @keyframes zoomInOut {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.01);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
   }
 }

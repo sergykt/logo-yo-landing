@@ -13,14 +13,17 @@ const autoSwiper = new Swiper('.auto__swiper', {
     clickable: true,
   },
   breakpoints: {
-    768: {
+    769: {
       slidesPerView: 2,
+      spaceBetween: 20,
     },
-    1024: {
+    1025: {
       slidesPerView: 3,
+      spaceBetween: 30,
     },
-    1280: {
+    1400: {
       slidesPerView: 4,
+      spaceBetween: 20,
     },
   },
   keyboard: {
@@ -29,4 +32,5 @@ const autoSwiper = new Swiper('.auto__swiper', {
   },
   grabCursor: true,
   a11y: true,
+  spaceBetween: 0,
 });

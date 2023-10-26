@@ -2,16 +2,35 @@
   background-color: $olive-green;
   color: $white;
   font-size: 18px;
+  line-height: 28px;
   font-weight: 400;
   font-family: 'HalvarBreitschrift';
   border: 2px solid $white;
   border-radius: 6px;
+  box-sizing: border-box;
   text-transform: uppercase;
   padding: 18px 30px;
+  margin: 0;
   white-space: nowrap;
   transition: all 0.2s ease-in;
 
   &:hover {
-    opacity: 0.85;
+    animation: zoomInOut 1s 1 alternate;
+    border-color: silver;
+    color: silver;
+
+    @keyframes zoomInOut {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.01);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
   }
 }

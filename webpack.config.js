@@ -51,7 +51,6 @@ module.exports = (env, argv) => {
                 },
               },
             },
-            'group-css-media-queries-loader',
             {
               loader: 'sass-loader',
               options: {

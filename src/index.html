@@ -40,7 +40,7 @@
                 </a>
               </li>
               <li class="header__menu-item header__menu-item_grey">
-                <a href="#" class="header__menu-link">
+                <a href="#cards" class="header__menu-link">
                   Клубные карты
                 </a>
               </li>
@@ -77,10 +77,11 @@
               Узнайте о преимуществах наших Клубных карт для аренды авто. Эксклюзивные предложения, бесплатные дни и
               многое другое ждут вас. Присоединяйтесь к клубу уже сегодня!
             </p>
-            <button class="round-button hero__round-button">
-              Выбрать карту
-            </button>
-
+            <a href="#cards" class="hero__round-button">
+              <button class="round-button">
+                Выбрать карту
+              </button>
+            </a>
           </div>
           <div class="hero__right">
             <img class="hero__first-card" src="./img/black-card.png" srcset="./img/black-cardx2.png 2x"
@@ -155,7 +156,7 @@
           </div>
         </div>
       </section>
-      <section class="offer">
+      <section class="offer" id="cards">
         <div class="container">
           <h2 class="offer__title">Выберите подходящую карту</h2>
           <p class="offer__text">
@@ -200,12 +201,7 @@
                   </div>
                 </div>
               </div>
-              <svg class="offer__swiper-prev-btn">
-                <use xlink:href="img/sprite.svg#btn-prev"></use>
-              </svg>
-              <svg class="offer__swiper-next-btn">
-                <use xlink:href="img/sprite.svg#btn-next"></use>
-              </svg>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>

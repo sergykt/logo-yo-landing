@@ -5,37 +5,73 @@
     display: flex;
     flex-wrap: wrap;
     gap: 50px 30px;
+    justify-content: center;
+
+    @media (max-width:768px) {
+      margin-bottom: 100px;
+    }
   }
 
   &__left {
     flex: 1 1 497px;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 1279.9px) {
+      align-items: center;
+      max-width: 850px;
+    }
   }
 
   &__title {
     font-family: 'EurostileRoundExtended';
     font-weight: 500;
-    font-size: 54px;
-    line-height: 81px;
     text-transform: uppercase;
     margin-bottom: 30px;
+
   }
 
   &__text {
     font-weight: 400;
-    font-size: 18px;
     line-height: 1.5;
     text-transform: capitalize;
     margin-bottom: 50px;
   }
 
   &__right {
-    margin: 0 auto;
     width: 633px;
     height: 600px;
     position: relative;
-    overflow: hidden;
+    transform-origin: center top;
+
+    @media (max-width: 767.9px) {
+      transform: scale(0.75);
+      height: 450px;
+    }
+
+    @media (max-width: 600px) {
+      transform: scale(0.6);
+      transform-origin: 40% top;
+      height: 360px;
+    }
+
+    @media (max-width: 500px) {
+      transform: scale(0.5);
+      transform-origin: 30% top;
+      height: 300px;
+    }
+
+    @media (max-width: 425px) {
+      transform: scale(0.45);
+      transform-origin: 20% top;
+      height: 270px;
+    }
+
+    @media (max-width: 375px) {
+      transform: scale(0.4);
+      transform-origin: 15% top;
+      height: 240px;
+    }
   }
 
   &__first-card {
@@ -74,15 +110,4 @@
     z-index: 7;
     box-shadow: 0px 6.51562px 26.0625px rgba(0, 0, 0, 0.3);
   }
-
-  &__round-button {
-    align-self: flex-end;
-    
-    @media (max-width: 1279px) {
-      align-self: center;
-    }
-  }
 }
-
-
-

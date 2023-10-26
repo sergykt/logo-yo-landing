@@ -1,30 +1,29 @@
 import Swiper from 'swiper';
-import { Navigation, Keyboard, A11y } from 'swiper/modules';
+import { Pagination, Keyboard, A11y } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 
 const offerSwiper = new Swiper('.offer__swiper', {
-  modules: [Navigation, Keyboard, A11y],
+  modules: [Pagination, Keyboard, A11y],
   direction: 'horizontal',
   slidesPerView: 1,
   keyboard: {
     enabled: true,
     onlyInViewport: true,
   },
-  navigation: {
-    nextEl: '.offer__swiper-next-btn',
-    prevEl: '.offer__swiper-prev-btn',
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
   },
   breakpoints: {
-    1024: {
+    769: {
       slidesPerView: 2,
       centeredSlides: false,
+      spaceBetween: 20,
     },
   },
   a11y: true,
   grabCursor: true,
-  centeredSlides: true,
-  spaceBetween: 20,
   loop: true,
 });

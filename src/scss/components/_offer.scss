@@ -4,8 +4,6 @@
     font-family: 'EurostileRoundExtended';
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
-    line-height: 48px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: center;
@@ -16,8 +14,6 @@
     font-family: 'HalvarBreitschrift';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
     text-align: center;
     text-transform: capitalize;
     max-width: 810px;
@@ -35,13 +31,22 @@
   }
 
   &__slide {
+    margin: 0 auto;
     max-width: 100%;
     display: flex;
     justify-content: center;
     transition: all 0.3s ease-in;
-    padding: 20px 0;
+    padding: 20px 0 40px 0;
     background-color: inherit;
     transition: all 0.2 ease-in;
+
+    @media (max-width: 767.9px) {
+      max-width: 70%;
+    }
+
+    @media (max-width: 575.9px) {
+      max-width: 80%;
+    }
   }
 
   &__card {
@@ -79,31 +84,7 @@
     }
   }
 
-  &__swiper-prev-btn {
-    position: absolute;
-    z-index: 15;
-    height: 35px;
-    width: 20px;
-    top: 50%;
-    left: -40px;
-    transform: translate(0, -50%);
-
-    @media (max-width: 1024px) {
-      left: -10px;
-    }
-  }
-
-  &__swiper-next-btn {
-    position: absolute;
-    z-index: 15;
-    height: 35px;
-    width: 20px;
-    top: 50%;
-    right: -40px;
-    transform: translate(0, -50%);
-
-    @media (max-width: 1024px) {
-      right: -10px;
-    }
+  .swiper-pagination-bullet {
+    background-color: $white;
   }
 }

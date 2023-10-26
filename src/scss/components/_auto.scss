@@ -4,8 +4,6 @@
     font-family: 'EurostileRoundExtended';
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
-    line-height: 48px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: center;
@@ -15,8 +13,7 @@
   &__swiper-wrapper {
     position: relative;
     overflow: hidden;
-    margin-bottom: 110px;
-    padding-bottom: 40px;
+    margin-bottom: 150px;
 
     &:after {
       position: absolute;
@@ -36,55 +33,66 @@
   &__swiper-slide {
     position: relative;
     margin: 0 auto;
-    width: 300px;
     height: 315px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 575.9px) {
+      height: 300px;
+    }
   }
 
   &__name {
     font-family: 'EurostileRoundExtended';
     font-style: normal;
-    font-weight: 500;
     font-size: 22px;
+    font-weight: 500;
     line-height: 28px;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+
+    @media (max-width: 575.9px) {
+      font-size: 18px;
+    }
   }
 
   &__img {
     position: absolute;
     z-index: 10;
+    width: 275px;
     max-width: 100%;
     top: 50%;
     left: 0;
     transform: translate(0%, -50%);
   }
 
-  &__prices {}
-
-  &__old-price {
+  &__prices {
     font-family: 'HalvarBreitschrift';
     font-style: normal;
     font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+  }
+
+  &__old-price {
     font-size: 18px;
     line-height: 28px;
-    letter-spacing: 0.02em;
     text-decoration-line: line-through;
-    text-transform: capitalize;
     color: $dark-grey;
     margin-bottom: 10px;
+
+    @media (max-width: 575.9px) {
+      font-size: 16px;
+    }
   }
 
   &__new-price {
-    font-family: 'HalvarBreitschrift';
-    font-style: normal;
-    font-weight: 400;
     font-size: 24px;
     line-height: 28px;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
+    @media (max-width: 575.9px) {
+      font-size: 20px;
+    }
   }
 
   &__extra-wrapper {
@@ -127,8 +135,10 @@
     margin: 0 28px;
   }
   
-  .swiper-pagination {
-    bottom: -30px;
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
   }
 
   .swiper-pagination-bullet {
