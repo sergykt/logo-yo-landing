@@ -17,7 +17,7 @@
     transition: all 0.3s ease-in;
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
   }
 
@@ -39,12 +39,11 @@
   &__nav {
     flex: 1 1;
     height: 100%;
-    display: flex;
-    align-items: center;
   }
 
   &__menu {
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     list-style: none;
@@ -105,5 +104,9 @@
     width: 40px;
     height: 40px;
     vertical-align: middle;
+  }
+
+  &__button {
+    font-size: 14px;
   }
 }

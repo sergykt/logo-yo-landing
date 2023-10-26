@@ -83,7 +83,7 @@ module.exports = (env, argv) => {
                     enabled: true,
                   },
                   pngquant: {
-                    quality: [0.8, 0.995],
+                    quality: [0.65, 0.9],
                   },
                   gifsicle: {
                     interlaced: false,

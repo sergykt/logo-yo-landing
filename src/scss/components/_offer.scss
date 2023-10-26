@@ -17,26 +17,29 @@
     text-align: center;
     text-transform: capitalize;
     max-width: 810px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 20px auto;
   }
 
   &__swiper-wrapper {
     overflow: hidden;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
   }
 
   &__swiper {
     position: relative;
     z-index: 10;
+    padding: 40px 0 40px 0;
   }
 
   &__slide {
+    position: relative;
+    z-index: 9;
     margin: 0 auto;
     max-width: 100%;
     display: flex;
     justify-content: center;
     transition: all 0.3s ease-in;
-    padding: 20px 0 40px 0;
+
     background-color: inherit;
     transition: all 0.2 ease-in;
 
@@ -45,13 +48,63 @@
     }
 
     @media (max-width: 575.9px) {
-      max-width: 80%;
+      max-width: 90%;
     }
   }
 
   &__card {
     width: 640px;
     max-width: 100%;
+    border-radius: 20px;
+    border: none;
+
+    &:hover {
+      animation: zoomInOut 1s 1 alternate;
+      box-shadow: 2px -2px 6px 3px rgba(255, 255, 255, 0.2);
+
+      @keyframes zoomInOut {
+        0% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.04);
+          box-shadow: 2px -2px 12px 6px rgba(255, 255, 255, 0.2);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+
+    @media (max-width: 1024px) {
+      font-size: 14px;
+      padding: 14px 26px;
+      bottom: 25px;
+      right: 30px;
+    }
+
+    @media (max-width: 576px) {
+      bottom: 20px;
+      right: 20px;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 12px;
+      padding: 10px 10px;
+      bottom: 10px;
+      right: 10px;
+    }
   }
 
   &__card:nth-child(2) {
@@ -59,28 +112,18 @@
   }
 
   &__slide:hover {
-    animation: zoomInOut 1s 1 alternate;
-
-    @keyframes zoomInOut {
-      0% {
-        transform: scale(1);
-      }
-
-      50% {
-        transform: scale(1.04);
-      }
-
-      100% {
-        transform: scale(1);
-      }
-    }
-
     .offer__card:nth-child(1) {
       display: none;
     }
 
     .offer__card:nth-child(2) {
       display: block;
+    }
+
+    .offer__button {
+      display: block;
+      pointer-events: auto;
+      opacity: 1;
     }
   }
 

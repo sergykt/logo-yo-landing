@@ -47,27 +47,27 @@
             </ul>
           </nav>
           <div class="header__socials">
-            <a href="#" class="header__social-link" aria-label="Telegram">
+            <a href="https://telegram.org" class="header__social-link" aria-label="Telegram">
               <svg class="header__social-logo">
                 <title>Telegram</title>
                 <use xlink:href="img/sprite.svg#telegram"></use>
               </svg>
             </a>
-            <a href="#" class="header__social-link" aria-label="Instagram">
+            <a href="https://instagram.com" class="header__social-link" aria-label="Instagram">
               <svg class="header__social-logo">
                 <title>Instagram</title>
                 <use xlink:href="img/sprite.svg#instagram"></use>
               </svg>
             </a>
           </div>
-          <button class="button header__connect-button">
+          <button class="button header__button">
             Связаться с нами
           </button>
         </div>
       </div>
     </header>
     <main class="main">
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="container hero__container">
           <div class="hero__left">
             <h1 class="hero__title">
@@ -174,6 +174,7 @@
                       alt="standard-card" title="Standard Card" loading="lazy">
                     <img class="offer__card" src="./img/offer/offer-blue-card.png"
                       srcset="./img/offer/offer-blue-cardx2.png 2x" alt="standard-card" title="Standard Card">
+                    <button class="button offer__button">Оформить карту</button>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -182,6 +183,7 @@
                       alt="silver-card" title="Silver Card" loading="lazy">
                     <img class="offer__card" src="./img/offer/offer-white-card.png"
                       srcset="./img/offer/offer-white-cardx2.png 2x" alt="silver-card" title="Silver Card">
+                    <button class="button offer__button">Оформить карту</button>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -190,6 +192,7 @@
                       title="Gold Card" loading="lazy">
                     <img class="offer__card" src="./img/offer/offer-gold-card.png"
                       srcset="./img/offer/offer-gold-cardx2.png 2x" alt="gold-card" title="Gold Card">
+                    <button class="button offer__button">Оформить карту</button>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -198,10 +201,54 @@
                       alt="premium-card" title="Premium Card" loading="lazy">
                     <img class="offer__card" src="./img/offer/offer-black-card.png"
                       srcset="./img/offer/offer-black-cardx2.png 2x" alt="premium-card" title="Premium Card">
+                    <button class="button offer__button">Оформить карту</button>
                   </div>
                 </div>
               </div>
               <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cta" id="cta">
+        <div class="container cta__container">
+          <div class="cta__gallery">
+            <div class="cta__column">
+              <p class="cta__text">
+                Элегантный подарок на любой случай
+              </p>
+              <div class="cta__picture">
+                <img src="./img/cta/new-year.png" srcset="./img/cta/new-yearx2.png 2x" alt="new-year" title="Новый год"
+                  class="cta__image">
+                <div class="cta__picture-text">
+                  <p class="cta__picture-title">На новый год</p>
+                  <p class="cta__picture-subtitle">
+                    Дарите незабываемые впечатления перед Новым годом</p>
+                </div>
+              </div>
+            </div>
+            <div class="cta__column">
+              <div class="cta__picture">
+                <img src="./img/cta/weekend.png" srcset="./img/cta/weekendx2.png 2x" alt="weekend" title="Выходной"
+                  class="cta__image">
+                <div class="cta__picture-text">
+                  <p class="cta__picture-title">На выходные</p>
+                  <p class="cta__picture-subtitle">
+                    Отличное дополнение для тех, кто ищет отдых</p>
+                </div>
+              </div>
+              <p class="cta__text">Автомобили всегда чистые и заправленные</p>
+            </div>
+            <div class="cta__column cta__last-column">
+              <div class="cta__picture">
+                <img src="./img/cta/birthday.png" srcset="./img/cta/birthdayx2.png 2x" alt="birthday"
+                  title="День рождения" class="cta__image">
+                <div class="cta__picture-text">
+                  <p class="cta__picture-title">На день рождения</p>
+                  <p class="cta__picture-subtitle">
+                    Эксклюзивное сюрпризное предложение для юбиляра</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
