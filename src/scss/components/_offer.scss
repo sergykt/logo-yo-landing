@@ -35,13 +35,8 @@
     position: relative;
     z-index: 9;
     margin: 0 auto;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    transition: all 0.3s ease-in;
-
-    background-color: inherit;
-    transition: all 0.2 ease-in;
+    width: 100%;
+    max-width: 640px;
 
     @media (max-width: 767.9px) {
       max-width: 70%;
@@ -53,30 +48,10 @@
   }
 
   &__card {
-    width: 640px;
-    max-width: 100%;
+    width: 100%;
     border-radius: 20px;
     border: none;
-
-    &:hover {
-      animation: zoomInOut 1s 1 alternate;
-      box-shadow: 2px -2px 6px 3px rgba(255, 255, 255, 0.2);
-
-      @keyframes zoomInOut {
-        0% {
-          transform: scale(1);
-        }
-
-        50% {
-          transform: scale(1.04);
-          box-shadow: 2px -2px 12px 6px rgba(255, 255, 255, 0.2);
-        }
-
-        100% {
-          transform: scale(1);
-        }
-      }
-    }
+    transition: opacity 0.25s ease-in;
   }
 
   &__button {
@@ -108,20 +83,43 @@
   }
 
   &__card:nth-child(2) {
-    display: none;
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &__slide:hover {
     .offer__card:nth-child(1) {
-      display: none;
+      pointer-events: none;
+      opacity: 0;
     }
 
     .offer__card:nth-child(2) {
-      display: block;
+      pointer-events: auto;
+      opacity: 1;
+
+      animation: zoomInOut 1s 1 alternate;
+      box-shadow: 2px -2px 8px 4px rgba(255, 255, 255, 0.35);
+
+      @keyframes zoomInOut {
+        0% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.03);
+          box-shadow: 2px -2px 12px 6px rgba(255, 255, 255, 0.35);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
     }
 
     .offer__button {
-      display: block;
       pointer-events: auto;
       opacity: 1;
     }

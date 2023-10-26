@@ -25,5 +25,4 @@ const offerSwiper = new Swiper('.offer__swiper', {
   },
   a11y: true,
   grabCursor: true,
-  loop: true,
 });
