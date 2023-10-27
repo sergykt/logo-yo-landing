@@ -1,0 +1,108 @@
+.form {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  position: relative;
+
+  &__title {
+    font-family: 'HalvarBreitschrift';
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    max-width: 441px;
+  }
+
+  &__text {
+    font-family: 'HalvarBreitschrift';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+    max-width: 453px;
+
+    @media (max-width: 767.9px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__controls-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+
+  &__control {
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+  }
+
+  &__input {
+    margin: 0;
+    padding: 11px;
+    width: 244px;
+    color: $white;
+    border: none;
+    border-bottom: 1px solid $white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'HalvarBreitschrift';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    transition: all 0.3s ease-in;
+
+    &::placeholder {
+      color: $white;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.35);;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__button {
+    width: 169px;
+    height: 169px;
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 27px;
+    height: 27px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    content: "";
+    background-color: transparent;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__close-button-img {
+    vertical-align: middle;
+    width: 27px;
+    height: 27px;
+  }
+}

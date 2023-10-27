@@ -101,7 +101,7 @@
       opacity: 1;
 
       animation: zoomInOut 1s 1 alternate;
-      box-shadow: 2px -2px 8px 4px rgba(255, 255, 255, 0.35);
+      box-shadow: 2px -2px 4px 2px rgba(255, 255, 255, 0.35);
 
       @keyframes zoomInOut {
         0% {
@@ -110,7 +110,7 @@
 
         50% {
           transform: scale(1.03);
-          box-shadow: 2px -2px 12px 6px rgba(255, 255, 255, 0.35);
+          box-shadow: 2px -2px 8px 4px rgba(255, 255, 255, 0.35);
         }
 
         100% {

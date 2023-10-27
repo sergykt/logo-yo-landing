@@ -34,6 +34,13 @@
     justify-content: space-between;
     flex: 1 1;
     gap: 30px;
+
+    @media (max-width: 1400px) {
+      flex-direction: column;
+      padding-top: 50px;
+      max-width: 250px;
+      min-width: 250px;
+    }
   }
 
   &__nav {
@@ -51,6 +58,10 @@
     margin: 0;
     gap: 10px;
     justify-content: space-between;
+
+    @media (max-width: 1400px) {
+      flex-direction: column;
+    }
   }
 
   &__menu-item {
@@ -90,20 +101,6 @@
   &__socials {
     display: flex;
     gap: 20px;
-  }
-
-  &__social-link {
-    transition: all 0.3s ease-in;
-
-    &:hover {
-      transform: scale(1.15);
-    }
-  }
-
-  &__social-logo {
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
   }
 
   &__button {

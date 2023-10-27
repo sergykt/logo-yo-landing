@@ -9,6 +9,9 @@
   <meta name="theme-color" content="#101010">
   <link rel="icon" href="resources/favicon.ico" />
   <title>Logo Yo - Аренда Авто</title>
+  <link rel="preload" href="fonts/EurostileRoundExtended-Medium.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous" />
+  <link rel="preload" href="fonts/HalvarBreit-Rg.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -48,19 +51,19 @@
           </nav>
           <div class="header__socials">
             <a href="https://telegram.org" class="header__social-link" aria-label="Telegram">
-              <svg class="header__social-logo">
+              <svg class="social-logo">
                 <title>Telegram</title>
                 <use xlink:href="img/sprite.svg#telegram"></use>
               </svg>
             </a>
             <a href="https://instagram.com" class="header__social-link" aria-label="Instagram">
-              <svg class="header__social-logo">
+              <svg class="social-logo">
                 <title>Instagram</title>
                 <use xlink:href="img/sprite.svg#instagram"></use>
               </svg>
             </a>
           </div>
-          <button class="button header__button">
+          <button class="button header__button" onclick="document.location.href='#form'">
             Связаться с нами
           </button>
         </div>
@@ -77,11 +80,9 @@
               Узнайте о преимуществах наших Клубных карт для аренды авто. Эксклюзивные предложения, бесплатные дни и
               многое другое ждут вас. Присоединяйтесь к клубу уже сегодня!
             </p>
-            <a href="#cards" class="hero__round-button">
-              <button class="round-button">
-                Выбрать карту
-              </button>
-            </a>
+            <button class="round-button" onclick="document.location.href='#cards'">
+              Выбрать карту
+            </button>
           </div>
           <div class="hero__right">
             <img class="hero__first-card" src="./img/black-card.png" srcset="./img/black-cardx2.png 2x"
@@ -255,7 +256,156 @@
       </section>
     </main>
     <footer class="footer">
+      <div class="footer__top">
+        <div class="container footer__top-body">
+          <div class="footer__main">
+            <a href="#" class="footer__logo-link" aria-label="Главная страница">
+              <svg class="footer__logo">
+                <title>Главная страница</title>
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <h2 class="footer__title">Аренда премиальных автомобилей в Москве</h2>
+            <nav class="footer__nav">
+              <ul class="footer__menu">
+                <li class="footer__menu-item">
+                  <a href="#auto" class="footer__menu-link">
+                    Автомобили
+                  </a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#" class="footer__menu-link">
+                    Покупка авто
+                  </a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#" class="footer__menu-link">
+                    Личная охрана
+                  </a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#cards" class="footer__menu-link">
+                    Клубные карты
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__contacts">
+            <p class="footer__contact-type">Телефон</p>
+            <div class="footer__phone-block">
+              <a class="footer__phone-number" href="tel:70000000000">+7 (000) 000-00-00</a>
+              <div class="footer__socials">
+                <a href="https://telegram.org" class="footer__social-link" aria-label="Telegram">
+                  <svg class="social-logo">
+                    <title>Telegram</title>
+                    <use xlink:href="img/sprite.svg#telegram"></use>
+                  </svg>
+                </a>
+                <a href="https://instagram.com" class="footer__social-link" aria-label="Instagram">
+                  <svg class="social-logo">
+                    <title>Instagram</title>
+                    <use xlink:href="img/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <p class="footer__regime">Работаем круглосуточно</p>
+            <p class="footer__contact-type">Адрес</p>
+            <p class="footer__address">Москва, Проспект Вернадского 12д</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__middle">
+        <div class="container footer__middle-container">
+          <div class="footer__subscribe">
+            <p class="footer__subcribe-us">
+              Следите за нами
+            </p>
+            <div class="footer__social-cards">
+              <div class="footer__social-card-item">
+                <a href="https://telegram.org" class="footer__social-link" aria-label="Telegram">
+                  <svg class="social-logo">
+                    <title>Telegram</title>
+                    <use xlink:href="img/sprite.svg#telegram"></use>
+                  </svg>
+                </a>
+                <p class="footer__social-card-name">Telegram</p>
+              </div>
+              <div class="footer__social-card-item">
+                <a href="https://instagram.com" class="footer__social-link" aria-label="Instagram">
+                  <svg class="social-logo">
+                    <title>Instagram</title>
+                    <use xlink:href="img/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+                <p class="footer__social-card-name">Instagram</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer__app">
+            <form class="form" id="form">
+              <div class="form__left">
+                <h3 class="form__title">Остались вопросы?</h3>
+                <p class="form__text">
+                  Отправьте заявку и наш эксперт свяжется с Вами в ближайшее время
+                </p>
+                <div class="form__controls-group">
+                  <div class="form__control">
+                    <label for="name" class="form__label">Ваше Имя</label>
+                    <input class="form__input" name="name" id="name" type="text" required placeholder="Ваше Имя">
+                  </div>
+                  <div class="form__control">
+                    <label for="phone" class="form__label">Номер телефона</label>
+                    <input class="form__input" name="phone" id="phone" type="tel" required placeholder="Номер телефона">
+                  </div>
+                </div>
+              </div>
+              <div class="form__right">
+                <button class="form__button round-button" type="submit">
+                  Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bot">
+        <div class="container footer__bot-container">
+          <p class="footer__copyright">LOGO YO All Rights</p>
+          <a href="#" class="footer__policy">Политика конфиденциальности</a>
+          <p class="footer__copyright">Дизайн и разработка - AA</p>
+        </div>
+      </div>
     </footer>
+  </div>
+  <div class="popup">
+    <form class="form popup__form" id="popup-form">
+      <div class="form__left">
+        <h3 class="form__title">Оформите карту</h3>
+        <p class="form__text">
+          Отправьте заявку и наш эксперт свяжется с Вами в ближайшее время
+        </p>
+        <div class="form__controls-group">
+          <div class="form__control">
+            <label for="popup-name" class="form__label">Ваше Имя</label>
+            <input class="form__input" name="name" id="popup-name" type="text" required placeholder="Ваше Имя">
+          </div>
+          <div class="form__control">
+            <label for="popup-phone" class="form__label">Номер телефона</label>
+            <input class="form__input" name="phone" id="popup-phone" type="tel" required placeholder="Номер телефона">
+          </div>
+        </div>
+      </div>
+      <div class="form__right">
+        <button class="button" type="submit">
+          Отправить
+        </button>
+      </div>
+      <button class="form__close-button" type="button" aria-label="close-button">
+        <img class="form__close-button-img" src="./img/close-button.png" alt="close" title="Закрыть">
+      </button>
+    </form>
   </div>
 </body>
 
