@@ -20,9 +20,9 @@ const offerSwiper = new Swiper('.offer__swiper', {
     769: {
       slidesPerView: 2,
       centeredSlides: false,
-      spaceBetween: 20,
     },
   },
   a11y: true,
   grabCursor: true,
+  spaceBetween: 20,
 });

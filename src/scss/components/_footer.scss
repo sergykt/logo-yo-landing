@@ -55,7 +55,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 10px;
+    gap: 20px 10px;
     flex-wrap: wrap;
     justify-content: space-between;
 
@@ -250,7 +250,7 @@
     flex-wrap: wrap;
     gap: 20px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1023.9px) {
       flex-direction: column;
     }
   }
