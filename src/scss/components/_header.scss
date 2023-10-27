@@ -9,8 +9,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: $header-height;
+    height: var(--header-height);
     gap: 70px;
+
+    @media (max-width: 1400px) {
+      $header-height: 50px;
+    }
   }
 
   &__logo-link {
