@@ -428,32 +428,34 @@
     </footer>
   </div>
   <div class="popup">
-    <form class="form popup__form" id="popup-form">
-      <div class="form__left">
-        <h3 class="form__title">Заказать звонок</h3>
-        <p class="form__text">
-          Отправьте заявку и наш эксперт свяжется с Вами в ближайшее время
-        </p>
-        <div class="form__controls-group">
-          <div class="form__control">
-            <label for="popup-name" class="form__label">Ваше Имя</label>
-            <input class="form__input" name="name" id="popup-name" type="text" required placeholder="Ваше Имя">
-          </div>
-          <div class="form__control">
-            <label for="popup-phone" class="form__label">Номер телефона</label>
-            <input class="form__input" name="phone" id="popup-phone" type="tel" required placeholder="Номер телефона">
+    <div class="popup__wrapper">
+      <form class="form popup__form" id="popup-form">
+        <div class="form__left">
+          <h3 class="form__title">Заказать звонок</h3>
+          <p class="form__text">
+            Отправьте заявку и наш эксперт свяжется с Вами в ближайшее время
+          </p>
+          <div class="form__controls-group">
+            <div class="form__control">
+              <label for="popup-name" class="form__label">Ваше Имя</label>
+              <input class="form__input" name="name" id="popup-name" type="text" required placeholder="Ваше Имя">
+            </div>
+            <div class="form__control">
+              <label for="popup-phone" class="form__label">Номер телефона</label>
+              <input class="form__input" name="phone" id="popup-phone" type="tel" required placeholder="Номер телефона">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="form__right">
-        <button class="button" type="submit">
-          Отправить
+        <div class="form__right">
+          <button class="button" type="submit">
+            Отправить
+          </button>
+        </div>
+        <button class="form__close-button" type="button" aria-label="close-button">
+          <img class="form__close-button-img" src="./img/close-button.png" alt="close" title="Закрыть">
         </button>
-      </div>
-      <button class="form__close-button" type="button" aria-label="close-button">
-        <img class="form__close-button-img" src="./img/close-button.png" alt="close" title="Закрыть">
-      </button>
-    </form>
+      </form>
+    </div>
   </div>
 </body>
 

@@ -12,6 +12,7 @@
   box-sizing: padding-box;
   transform: translate(-100%, 0);
   transition: transform 0.3s ease-in;
+  overflow: auto;
 
   @media (max-width: 1400px) {
     display: flex;
@@ -22,7 +23,9 @@
   }
 
   &__body {
-    padding: 40px var(--gutter);
+    padding: 40px var(--gutter) 20px var(--gutter);
+    min-height: 423px;
+    box-sizing: border-box;
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
