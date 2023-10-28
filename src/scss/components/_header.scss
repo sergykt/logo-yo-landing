@@ -3,18 +3,17 @@
   z-index: 100;
   top: 0;
   width: 100%;
-  background-color: $dark-charcoal;
+  background-color: var(--dark-charcoal);
+  box-shadow: 0px 0px 30px var(--black-shadow);
 
   &__container {
+    z-index: 99;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: var(--header-height);
     gap: 70px;
-
-    @media (max-width: 1400px) {
-      $header-height: 50px;
-    }
   }
 
   &__logo-link {
@@ -33,24 +32,25 @@
 
   &__main {
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex: 1 1;
     gap: 30px;
 
     @media (max-width: 1400px) {
       display: none;
-      flex-direction: column;
-      padding-top: 50px;
-      max-width: 250px;
-      min-width: 250px;
     }
   }
 
+  &__main_active {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
   &__nav {
-    flex: 1 1;
     height: 100%;
+    width: 100%;
   }
 
   &__menu {
@@ -63,19 +63,17 @@
     margin: 0;
     gap: 10px;
     justify-content: space-between;
-
-    @media (max-width: 1400px) {
-      flex-direction: column;
-    }
   }
 
   &__menu-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100%;
+    box-sizing: border-box;
 
     &_grey {
-      background-color: $grey;
+      background-color: var(--grey);
       padding-left: 20px;
       padding-right: 20px;
     }
@@ -86,6 +84,7 @@
     font-weight: 400;
     white-space: nowrap;
     position: relative;
+    text-align: center;
 
     &:after {
       position: absolute;
@@ -94,7 +93,7 @@
       width: 0;
       height: 1px;
       content: "";
-      background-color: $white;
+      background-color: var(--white);
       transition: all 0.3s ease-in;
     }
 

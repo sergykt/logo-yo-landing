@@ -1,7 +1,7 @@
 .footer {
   &__top {
-    border-top: 1px solid $dark-grey;
-    border-bottom: 1px solid $dark-grey;
+    border-top: 1px solid var(--dark-grey);
+    border-bottom: 1px solid var(--dark-grey);
   }
 
   &__top-body {
@@ -84,7 +84,7 @@
       width: 0;
       height: 1px;
       content: "";
-      background-color: $white;
+      background-color: var(--white);
       transition: all 0.3s ease-in;
     }
 
@@ -104,7 +104,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: $dark-grey;
+    color: var(--dark-grey);
     margin-bottom: 14px;
   }
 
@@ -132,7 +132,7 @@
       width: 0;
       height: 1px;
       content: "";
-      background-color: $white;
+      background-color: var(--white);
       transition: all 0.3s ease-in;
     }
 
@@ -171,7 +171,7 @@
   }
 
   &__middle {
-    border-bottom: 1px solid $dark-grey;
+    border-bottom: 1px solid var(--dark-grey);
   }
 
   &__middle-container {
@@ -194,7 +194,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: $dark-grey;
+    color: var(--dark-grey);
     margin-bottom: 35px;
   }
 
@@ -204,17 +204,30 @@
     gap: 40px;
   }
 
-  &__social-card-item {
+  &__social-card {
     max-width: 187px;
     min-width: 187px;
     width: 100%;
     height: 137px;
     border-radius: 10px;
-    background-color: $olive-green;
+    background-color: var(--olive-green);
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all 0.3s ease-in;
+  }
+
+  &__social-card_telegram {
+    &:hover {
+      background-color: var(--sky-blue);
+    }
+  }
+
+  &__social-card_instagram {
+    &:hover {
+      background-color: var(--coral);
+    }
   }
 
   &__social-name {
@@ -280,7 +293,7 @@
       width: 0;
       height: 1px;
       content: "";
-      background-color: $white;
+      background-color: var(--white);
       transition: all 0.3s ease-in;
     }
 

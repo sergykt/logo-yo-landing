@@ -1,5 +1,6 @@
 const offerButtons = document.querySelectorAll('.offer__button');
 const headerButton = document.querySelector('.header__button');
+const burgerButton = document.querySelector('.burger__button');
 const popupEl = document.querySelector('.popup');
 const popupForm = document.querySelector('#popup-form');
 const closeButton = document.querySelector('.form__close-button');
@@ -20,6 +21,10 @@ headerButton.addEventListener('click', (e) => {
   onClick();
 });
 
+burgerButton.addEventListener('click', (e) => {
+  onClick();
+});
+
 offerButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -36,10 +41,7 @@ popupForm.addEventListener('click', (e) => {
   e.stopPropagation();
 });
 
-document.body.addEventListener('click', (e) => {
-  if (popupEl.classList.contains('popup_active')) {
-    document.body.style.overflow = 'auto';
-    popupEl.classList.toggle('popup_active');
-  }
+popupEl.addEventListener('click', (e) => {
+  e.stopPropagation();
+  onClick();
 });
-

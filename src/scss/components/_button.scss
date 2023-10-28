@@ -1,11 +1,11 @@
 .button {
-  background-color: $olive-green;
-  color: $white;
+  background-color: var(--olive-green);
+  color: var(--white);
   font-size: 18px;
   line-height: 1.5;
   font-weight: 400;
   font-family: 'HalvarBreitschrift';
-  border: 2px solid $white;
+  border: 2px solid var(--white);
   border-radius: 6px;
   box-sizing: border-box;
   text-transform: uppercase;
@@ -15,8 +15,8 @@
   transition: all 0.3s ease-in;
 
   &:hover {
-    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.2), 0px 0px 8px 4px rgba(255, 255, 255, 0.2);
-    border-color: silver;
-    color: silver;
+    box-shadow: inset 0px 0px 10px var(--grey), 0px 0px 8px 4px var(--grey);
+    border-color: var(--silver);
+    color: var(--silver);
   }
 }

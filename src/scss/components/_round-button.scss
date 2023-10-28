@@ -1,11 +1,11 @@
 .round-button {
   width: 200px;
   height: 200px;
-  color: $white;
+  color: var(--white);
   font-size: 18px;
   line-height: 1.5;
   font-family: 'HalvarBreitschrift';
-  border: 2px solid $white;
+  border: 2px solid var(--white);
   border-radius: 50%;
   box-sizing: border-box;
   padding: 0;
@@ -20,8 +20,8 @@
   }
 
   &:hover {
-    border-color: silver;
-    color: silver;
-    box-shadow: inset 0px 0px 16px rgba(255, 255, 255, 0.2), 0px 0px 16px 8px rgba(255, 255, 255, 0.2);
+    border-color: var(--silver);
+    color: var(--silver);
+    box-shadow: inset 0px 0px 16px var(--grey), 0px 0px 16px 8px var(--grey);
   }
 }

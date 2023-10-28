@@ -1,6 +1,6 @@
 body {
-  color: $white;
-  background-color: $background-color;
+  color: var(--white);
+  background-color: var(--background-color);
   font-size: 18px;
   line-height: 1.5;
   font-family: 'HalvarBreitschrift';
@@ -29,16 +29,8 @@ body {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 var(--gutter);
   box-sizing: border-box;
-
-  @media (max-width: 1023.9px) {
-    padding: 0 30px;
-  }
-
-  @media (max-width: 767.9px) {
-    padding: 0 20px;
-  }
 }
 
 h1,
