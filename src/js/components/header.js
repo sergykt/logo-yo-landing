@@ -31,7 +31,6 @@ header.addEventListener('click', (e) => {
 
 burgerMenuBody.addEventListener('click', (e) => {
   e.stopPropagation();
-  console.log(e.target);
   if (e.target !== burgerMenuBody) {
     onClick();
   }
