@@ -13,12 +13,14 @@
   opacity: 0;
   overflow: auto;
   transition: opacity 0.3s ease-in;
+  pointer-events: none;
 
   @media (max-width: 1400px) {
     display: flex;
   }
 
   &_active {
+    pointer-events: auto;
     opacity: 1;
 
     .burger__body {
