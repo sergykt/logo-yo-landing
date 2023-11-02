@@ -39,6 +39,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "swiper": "^10.3.1"
   }
 }
