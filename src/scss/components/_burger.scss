@@ -1,17 +1,17 @@
 .burger {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 98;
   background-color: transparent;
   backdrop-filter: blur(5px);
   top: 0;
+  height: calc(100% - var(--header-height));
   margin-top: var(--header-height);
-  height: calc(100vh - var(--header-height));
-  width: 100vw;
+  width: 100%;
   left: 0;
-  box-sizing: padding-box;
   opacity: 0;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   transition: opacity 0.15s ease-in-out;
   pointer-events: none;
 
@@ -28,17 +28,19 @@
     }
   }
 
+  &__wrapper {
+    min-height: 100%;
+  }
+
   &__body {
-    padding: 40px var(--gutter) 20px var(--gutter);
-    min-height: 423px;
-    box-sizing: border-box;
+    padding: 30px var(--gutter);
     background-color: var(--background-color);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     transform: translate(-100%, 0);
     transition: transform 0.3s ease-in-out;
-
     gap: 20px;
 
     @media (max-width: 575.9px) {
